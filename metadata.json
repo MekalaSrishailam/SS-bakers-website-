@@ -1,0 +1,6 @@
+{
+  "name": "SS Bakers - Artisan Bakery & Live Order System",
+  "description": "Artisan bakery online ordering platform with real-time kitchen tracking, dynamic customer catalog, business owner dashboard, and inventory management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

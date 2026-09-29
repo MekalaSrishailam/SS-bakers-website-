@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  [data-theme="honey"] {
+    /* 1. Primary Backgrounds: Warm Alabaster Cream */
+    --bg-cream: #FDFBF7;
+    --card-surface: #FFFFFF;
+
+    /* 2. Typography & Contrast: Deep Ganache Chocolate */
+    --text-chocolate: #3D2314;
+    --text-muted: #64412D;
+    
+    /* 3. Primary Buttons & Key CTAs: Salted Caramel Gold */
+    --cta-caramel: #D4AF37;
+    --cta-caramel-hover: #C59F2D;
+    --cta-caramel-active: #B58F23;
+    --cta-text: #3D2314;
+    
+    /* 4. Subtle Borders & Card Dividers: Pastel Rose/Macaron Pink */
+    --accent-rose: #F3E1DC;
+    --accent-rose-light: #FDF8F6;
+    --accent-rose-hover: #EBD4CE;
+    --accent-rose-border: #F3E1DC;
+
+    --accent-gold: #D4AF37;
+    --accent-emerald: #15803D;
+    --accent-berry: #BE185D;
+
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  /* Palette 2: Berry Velvet & Macaron Rose (Celebratory, strawberry glaze, sweet) */
+  [data-theme="berry"] {
+    --bg-cream: #FFFBFD;
+    --card-surface: #FFFFFF;
+    --text-chocolate: #280E18;
+    --text-muted: #6E3048;
+    
+    --cta-caramel: #E11D48;
+    --cta-caramel-hover: #BE123C;
+    --cta-caramel-active: #9F1239;
+    --cta-text: #FFFFFF;
+    
+    --accent-rose: #FBCFE8;
+    --accent-rose-light: #FDF2F8;
+    --accent-rose-hover: #F472B6;
+    --accent-rose-border: #FCE7F3;
+
+    --accent-gold: #F59E0B;
+    --accent-emerald: #16A34A;
+    --accent-berry: #BE185D;
+  }
+
+  /* Palette 3: Belgian Dark Truffle (Luxury chocolate, golden amber, decadent) */
+  [data-theme="truffle"] {
+    --bg-cream: #FAF6F0;
+    --card-surface: #FFFFFF;
+    --text-chocolate: #1A0D06;
+    --text-muted: #5A3D2C;
+    
+    --cta-caramel: #D97706;
+    --cta-caramel-hover: #B45309;
+    --cta-caramel-active: #92400E;
+    --cta-text: #FFFFFF;
+    
+    --accent-rose: #EADBC8;
+    --accent-rose-light: #F8F3ED;
+    --accent-rose-hover: #D7C2AD;
+    --accent-rose-border: #EFE6DD;
+
+    --accent-gold: #F59E0B;
+    --accent-emerald: #16A34A;
+    --accent-berry: #E11D48;
+  }
+
+  /* Palette 4: Holiday Seasonal (Festive Spiced Cranberry, Evergreen Pine & Star Gold) */
+  [data-theme="holiday"] {
+    --bg-cream: #FCFAF7;
+    --card-surface: #FFFFFF;
+    --text-chocolate: #241416;
+    --text-muted: #5E3C3E;
+    
+    --cta-caramel: #C81E2E;
+    --cta-caramel-hover: #A61623;
+    --cta-caramel-active: #8A121D;
+    --cta-text: #FFFFFF;
+    
+    --accent-rose: #E3ECE6;
+    --accent-rose-light: #F4F8F5;
+    --accent-rose-hover: #D1E1D6;
+    --accent-rose-border: #DCE8DF;
+
+    --accent-gold: #F59E0B;
+    --accent-emerald: #15803D;
+    --accent-berry: #C81E2E;
+  }
+
+  /* Palette 5: Royal Saffron & Pistachio (Rich saffron gold, cardamom cream & pistachio emerald) */
+  [data-theme="saffron"] {
+    --bg-cream: #FFFDF5;
+    --card-surface: #FFFFFF;
+    --text-chocolate: #261608;
+    --text-muted: #664321;
+    
+    --cta-caramel: #EA580C;
+    --cta-caramel-hover: #C2410C;
+    --cta-caramel-active: #9A3412;
+    --cta-text: #FFFFFF;
+    
+    --accent-rose: #FED7AA;
+    --accent-rose-light: #FFF7ED;
+    --accent-rose-hover: #FDBA74;
+    --accent-rose-border: #FFEDD5;
+
+    --accent-gold: #F59E0B;
+    --accent-emerald: #15803D;
+    --accent-berry: #BE185D;
+  }
+
+  .dark {
+    --bg-cream: #18100B;
+    --card-surface: #241812;
+    --text-chocolate: #FDFBF7;
+    --text-muted: #D9C8BE;
+    --accent-rose: #44291F;
+    --accent-rose-light: #2D1B14;
+    --accent-rose-hover: #533327;
+    --accent-rose-border: #44291F;
+  }
+
+  .dark[data-theme="saffron"],
+  [data-theme="saffron"].dark {
+    --bg-cream: #1C1309;
+    --card-surface: #271A0E;
+    --text-chocolate: #FFFDF5;
+    --text-muted: #E2CFBE;
+    --accent-rose: #4A3018;
+    --accent-rose-light: #322010;
+    --accent-rose-hover: #5D3D1E;
+    --accent-rose-border: #4A3018;
+    --cta-caramel: #F97316;
+    --cta-caramel-hover: #EA580C;
+    --cta-text: #FFFFFF;
+  }
+
+  .dark[data-theme="holiday"],
+  [data-theme="holiday"].dark {
+    --bg-cream: #131A16;
+    --card-surface: #1C2621;
+    --text-chocolate: #FDFBF7;
+    --text-muted: #CBDAD1;
+    --accent-rose: #2E3E36;
+    --accent-rose-light: #202B26;
+    --accent-rose-hover: #3A4F44;
+    --accent-rose-border: #2E3E36;
+    --cta-caramel: #E12A3B;
+    --cta-caramel-hover: #C51D2D;
+    --cta-text: #FFFFFF;
+  }
+
+  body {
+    background-color: var(--bg-cream);
+    color: var(--text-chocolate);
+    font-family: var(--font-sans);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--font-serif);
+    color: var(--text-chocolate);
+  }
+
+  .font-mono-numbers {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Palette utility classes matching strict design specs */
+.bg-cream {
+  background-color: var(--bg-cream) !important;
+}
+
+.card-surface {
+  background-color: var(--card-surface, #FFFFFF) !important;
+}
+
+.text-chocolate {
+  color: var(--text-chocolate) !important;
+}
+
+.border-accent-rose {
+  border-color: var(--accent-rose) !important;
+}
+
+.bg-accent-rose {
+  background-color: var(--accent-rose) !important;
+}
+
+.bg-accent-rose-light {
+  background-color: var(--accent-rose-light) !important;
+}
+
+.bg-cta-caramel {
+  background-color: var(--cta-caramel) !important;
+  color: var(--cta-text, #3D2314) !important;
+}
+
+.bg-cta-caramel:hover {
+  background-color: var(--cta-caramel-hover) !important;
+}
+
+.bg-cta-caramel:active {
+  background-color: var(--cta-caramel-active) !important;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
